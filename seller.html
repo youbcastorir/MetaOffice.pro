@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Dashboard — AgentHub | MetaOffice.pro</title>
+  <meta name="description" content="Publish and monetize your AI agents on AgentHub. Reach 18,500+ businesses and earn 80% revenue on every sale." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Agent<span class="logo-accent">Hub</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#marketplace" class="nav-link">Marketplace</a>
+        <a href="dashboard.html" class="nav-link">My Dashboard</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-theme-toggle" id="themeToggle"><span class="theme-icon">◐</span></button>
+        <a href="index.html" class="btn-secondary">← Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seller Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="section-tag">Seller Hub</span>
+      <h1 class="page-title">Build. Publish. Earn.</h1>
+      <p class="page-subtitle">Turn your AI expertise into income. List agents on AgentHub and earn 80% of every sale.</p>
+    </div>
+  </section>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Seller</div>
+      <a class="sidebar-item active" onclick="switchSellerTab('overview', this)">
+        <span class="sidebar-icon">📊</span> Overview
+      </a>
+      <a class="sidebar-item" onclick="switchSellerTab('publish', this)">
+        <span class="sidebar-icon">➕</span> Publish Agent
+      </a>
+      <a class="sidebar-item" onclick="switchSellerTab('listings', this)">
+        <span class="sidebar-icon">📋</span> My Listings
+      </a>
+      <a class="sidebar-item" onclick="switchSellerTab('analytics', this)">
+        <span class="sidebar-icon">📈</span> Analytics
+      </a>
+      <a class="sidebar-item" onclick="switchSellerTab('earnings', this)">
+        <span class="sidebar-icon">💰</span> Earnings
+      </a>
+      <a class="sidebar-item" onclick="switchSellerTab('reviews', this)">
+        <span class="sidebar-icon">⭐</span> Reviews
+      </a>
+      <div class="sidebar-section-label">Resources</div>
+      <a class="sidebar-item" onclick="switchSellerTab('guide', this)">
+        <span class="sidebar-icon">📖</span> Seller Guide
+      </a>
+      <a href="mailto:salatrir@gmail.com" class="sidebar-item">
+        <span class="sidebar-icon">✉</span> Seller Support
+      </a>
+    </aside>
+
+    <main class="dashboard-main" id="sellerMain">
+      <!-- Populated by seller.js -->
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="agents.js"></script>
+  <script src="app.js"></script>
+  <script src="seller.js"></script>
+</body>
+</html>

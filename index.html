@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentHub — AI Agent Marketplace | MetaOffice.pro</title>
+  <meta name="description" content="The world's premier marketplace for AI agents. Buy, sell, and deploy specialized AI agents for sales, marketing, support, research, writing, and business automation." />
+  <meta name="keywords" content="AI agents, AI marketplace, buy AI agents, sell AI agents, business automation, AI tools" />
+  <meta name="author" content="MetaOffice.pro" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://metaoffice.pro/" />
+  <meta property="og:title" content="AgentHub — AI Agent Marketplace" />
+  <meta property="og:description" content="The world's premier marketplace for AI agents. Deploy intelligence across your entire business." />
+  <meta property="og:image" content="https://metaoffice.pro/og-image.png" />
+  <meta property="og:site_name" content="MetaOffice.pro" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@metaofficepro" />
+  <meta name="twitter:title" content="AgentHub — AI Agent Marketplace" />
+  <meta name="twitter:description" content="Buy, sell, and deploy AI agents specialized for every business task." />
+  <meta name="twitter:image" content="https://metaoffice.pro/og-image.png" />
+
+  <!-- Schema.org Marketplace -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AgentHub",
+    "url": "https://metaoffice.pro",
+    "description": "AI Agent Marketplace",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://metaoffice.pro/marketplace?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MetaOffice.pro",
+    "url": "https://metaoffice.pro",
+    "logo": "https://metaoffice.pro/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "salatrir@gmail.com",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+
+  <link rel="canonical" href="https://metaoffice.pro/" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Agent<span class="logo-accent">Hub</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#marketplace" class="nav-link">Marketplace</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="seller.html" class="nav-link">Sell Agents</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+        <button class="btn-secondary" onclick="openModal('loginModal')">Sign In</button>
+        <button class="btn-primary" onclick="openModal('signupModal')">Get Started</button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>2,400+ AI Agents Live</span>
+      </div>
+      <h1 class="hero-title">
+        The World's Premier
+        <span class="hero-title-gradient">AI Agent</span>
+        Marketplace
+      </h1>
+      <p class="hero-subtitle">
+        Deploy intelligent agents across your entire business. Buy, sell, and manage specialized AI agents built for every workflow — from sales to research to customer support.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-hero-primary" onclick="document.getElementById('marketplace').scrollIntoView({behavior:'smooth'})">
+          <span>Explore Agents</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <button class="btn-hero-secondary" onclick="openModal('signupModal')">
+          <span>Become a Seller</span>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="2400">0</span>
+          <span class="stat-label">AI Agents</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="18500">0</span>
+          <span class="stat-label">Active Users</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="940">0</span>
+          <span class="stat-label">Sellers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="99">0</span>
+          <span class="stat-label">% Uptime</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section" id="categories">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Agent Categories</span>
+        <h2 class="section-title">Agents Built for Every Business Function</h2>
+        <p class="section-subtitle">Six specialized verticals. Hundreds of agents. One marketplace.</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Populated by agents.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED AGENTS / MARKETPLACE -->
+  <section class="marketplace-section" id="marketplace">
+    <div class="section-container">
+      <div class="marketplace-header">
+        <div class="section-header" style="text-align:left; margin-bottom:0;">
+          <span class="section-tag">Marketplace</span>
+          <h2 class="section-title">Featured AI Agents</h2>
+        </div>
+        <div class="marketplace-controls">
+          <div class="search-bar">
+            <span class="search-icon">⌕</span>
+            <input type="text" id="agentSearch" placeholder="Search agents..." class="search-input" />
+          </div>
+          <div class="filter-tabs" id="filterTabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="sales">Sales</button>
+            <button class="filter-tab" data-filter="marketing">Marketing</button>
+            <button class="filter-tab" data-filter="support">Support</button>
+            <button class="filter-tab" data-filter="research">Research</button>
+            <button class="filter-tab" data-filter="writing">Writing</button>
+            <button class="filter-tab" data-filter="business">Business</button>
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low</option>
+            <option value="price-high">Price: High</option>
+          </select>
+        </div>
+      </div>
+      <div class="agents-grid" id="agentsGrid">
+        <!-- Populated by marketplace.js -->
+      </div>
+      <div class="load-more-container">
+        <button class="btn-load-more" id="loadMoreBtn">Load More Agents</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP RATED -->
+  <section class="top-rated-section" id="topRated">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Top Rated</span>
+        <h2 class="section-title">Community Favorites</h2>
+        <p class="section-subtitle">Agents with the highest ratings and most satisfied users.</p>
+      </div>
+      <div class="top-rated-grid" id="topRatedGrid">
+        <!-- Populated by marketplace.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section" id="benefits">
+    <div class="section-container">
+      <div class="benefits-split">
+        <div class="benefits-left">
+          <span class="section-tag">Why AgentHub</span>
+          <h2 class="section-title">The Smarter Way to Deploy AI</h2>
+          <p class="section-subtitle">AgentHub connects businesses with best-in-class AI agents, while enabling developers and AI builders to monetize their creations.</p>
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon">⚡</div>
+              <div>
+                <h4>Deploy in Minutes</h4>
+                <p>No engineering required. Purchase, configure, and deploy agents in minutes.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔒</div>
+              <div>
+                <h4>Verified & Secure</h4>
+                <p>Every agent is reviewed, tested, and verified before listing.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">📈</div>
+              <div>
+                <h4>Scale Effortlessly</h4>
+                <p>Start with one agent. Scale to hundreds as your business grows.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">💰</div>
+              <div>
+                <h4>Monetize Your AI</h4>
+                <p>Sellers keep 80% of revenue. Publish once, earn continuously.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-right">
+          <div class="benefits-visual">
+            <div class="bv-card bv-card-1">
+              <div class="bv-card-icon">🤖</div>
+              <div class="bv-card-content">
+                <span class="bv-card-label">Sales Agent Pro</span>
+                <span class="bv-card-stat">+340% leads</span>
+              </div>
+            </div>
+            <div class="bv-card bv-card-2">
+              <div class="bv-card-icon">📊</div>
+              <div class="bv-card-content">
+                <span class="bv-card-label">Research Master</span>
+                <span class="bv-card-stat">10x faster</span>
+              </div>
+            </div>
+            <div class="bv-card bv-card-3">
+              <div class="bv-card-icon">✍️</div>
+              <div class="bv-card-content">
+                <span class="bv-card-label">Content Writer AI</span>
+                <span class="bv-card-stat">5k+ articles</span>
+              </div>
+            </div>
+            <div class="bv-orb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS TICKER -->
+  <section class="stats-section">
+    <div class="stats-ticker">
+      <div class="ticker-inner" id="statsTickerInner">
+        <span>⚡ 2,400+ Active Agents</span>
+        <span class="ticker-dot">•</span>
+        <span>🌍 87 Countries</span>
+        <span class="ticker-dot">•</span>
+        <span>💼 18,500+ Businesses Served</span>
+        <span class="ticker-dot">•</span>
+        <span>⭐ 4.9/5 Average Rating</span>
+        <span class="ticker-dot">•</span>
+        <span>💰 $2.4M+ Paid to Sellers</span>
+        <span class="ticker-dot">•</span>
+        <span>🚀 940 Verified Sellers</span>
+        <span class="ticker-dot">•</span>
+        <span>🔄 99.9% Uptime</span>
+        <span class="ticker-dot">•</span>
+        <!-- repeat for seamless loop -->
+        <span>⚡ 2,400+ Active Agents</span>
+        <span class="ticker-dot">•</span>
+        <span>🌍 87 Countries</span>
+        <span class="ticker-dot">•</span>
+        <span>💼 18,500+ Businesses Served</span>
+        <span class="ticker-dot">•</span>
+        <span>⭐ 4.9/5 Average Rating</span>
+        <span class="ticker-dot">•</span>
+        <span>💰 $2.4M+ Paid to Sellers</span>
+        <span class="ticker-dot">•</span>
+        <span>🚀 940 Verified Sellers</span>
+        <span class="ticker-dot">•</span>
+        <span>🔄 99.9% Uptime</span>
+        <span class="ticker-dot">•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Trusted by Forward-Thinking Teams</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Start free. Scale as you grow. No hidden fees.</p>
+      </div>
+      <div class="pricing-toggle">
+        <span class="toggle-label">Monthly</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="billingToggle" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Annual <span class="badge-save">Save 30%</span></span>
+      </div>
+      <div class="pricing-grid" id="pricingGrid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
+      <div class="faq-grid" id="faqGrid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <div class="contact-card">
+        <div class="contact-left">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Have questions? We're here to help you deploy the right agents.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-icon">✉</span>
+              <a href="mailto:salatrir@gmail.com" class="contact-link">salatrir@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🌐</span>
+              <span>metaoffice.pro</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="contactName" placeholder="Your name" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="contactEmail" placeholder="your@email.com" class="form-input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" id="contactSubject" placeholder="How can we help?" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="contactMessage" placeholder="Tell us more..." class="form-textarea" rows="4"></textarea>
+            </div>
+            <button class="btn-primary btn-full" onclick="submitContact()">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">Agent<span class="logo-accent">Hub</span></span>
+          </a>
+          <p class="footer-tagline">The world's premier AI agent marketplace. Deploy intelligence across your entire business.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="GitHub">⌥</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Marketplace</h4>
+            <a href="#marketplace">Browse Agents</a>
+            <a href="#categories">Categories</a>
+            <a href="#topRated">Top Rated</a>
+            <a href="marketplace.html">All Agents</a>
+          </div>
+          <div class="footer-col">
+            <h4>Sellers</h4>
+            <a href="seller.html">Sell Agents</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#benefits">About</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:salatrir@gmail.com">salatrir@gmail.com</a>
+            <a href="#faq">Support</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MetaOffice.pro — AgentHub. All rights reserved.</p>
+        <p>Built for the future of work.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AGENT DETAIL MODAL -->
+  <div class="modal-overlay" id="agentModal" onclick="closeModalOnOverlay(event,'agentModal')">
+    <div class="modal modal-agent" id="agentModalContent">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-overlay" id="loginModal" onclick="closeModalOnOverlay(event,'loginModal')">
+    <div class="modal modal-auth">
+      <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+      <div class="modal-header">
+        <span class="logo-icon" style="font-size:2rem">⬡</span>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your AgentHub account</p>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-input" placeholder="your@email.com" id="loginEmail" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-input" placeholder="••••••••" id="loginPassword" />
+      </div>
+      <button class="btn-primary btn-full" onclick="handleLogin()">Sign In</button>
+      <p class="auth-switch">Don't have an account? <a href="#" onclick="switchModal('loginModal','signupModal')">Sign Up</a></p>
+    </div>
+  </div>
+
+  <!-- SIGNUP MODAL -->
+  <div class="modal-overlay" id="signupModal" onclick="closeModalOnOverlay(event,'signupModal')">
+    <div class="modal modal-auth">
+      <button class="modal-close" onclick="closeModal('signupModal')">✕</button>
+      <div class="modal-header">
+        <span class="logo-icon" style="font-size:2rem">⬡</span>
+        <h2>Join AgentHub</h2>
+        <p>Create your free account today</p>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-input" placeholder="John" id="signupFirst" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-input" placeholder="Doe" id="signupLast" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-input" placeholder="your@email.com" id="signupEmail" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-input" placeholder="Min 8 characters" id="signupPassword" />
+      </div>
+      <div class="form-group">
+        <label>I want to</label>
+        <select class="form-input" id="signupRole">
+          <option value="buyer">Buy AI Agents</option>
+          <option value="seller">Sell AI Agents</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+      <button class="btn-primary btn-full" onclick="handleSignup()">Create Account</button>
+      <p class="auth-switch">Already have an account? <a href="#" onclick="switchModal('signupModal','loginModal')">Sign In</a></p>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="agents.js"></script>
+  <script src="marketplace.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

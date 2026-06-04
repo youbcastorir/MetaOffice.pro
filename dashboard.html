@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — AgentHub | MetaOffice.pro</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Agent<span class="logo-accent">Hub</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#marketplace" class="nav-link">Marketplace</a>
+        <a href="seller.html" class="nav-link">Sell Agents</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-theme-toggle" id="themeToggle"><span class="theme-icon">◐</span></button>
+        <a href="index.html" class="btn-secondary">← Back to Marketplace</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section-label">Main</div>
+      <a href="#overview" class="sidebar-item active" onclick="switchDashTab('overview', this)">
+        <span class="sidebar-icon">◈</span> Overview
+      </a>
+      <a href="#my-agents" class="sidebar-item" onclick="switchDashTab('myAgents', this)">
+        <span class="sidebar-icon">🤖</span> My Agents
+        <span class="sidebar-badge" id="agentCountBadge">0</span>
+      </a>
+      <a href="#wishlist" class="sidebar-item" onclick="switchDashTab('wishlist', this)">
+        <span class="sidebar-icon">♥</span> Wishlist
+      </a>
+      <a href="#history" class="sidebar-item" onclick="switchDashTab('history', this)">
+        <span class="sidebar-icon">📋</span> Purchase History
+      </a>
+      <div class="sidebar-section-label">Account</div>
+      <a href="#profile" class="sidebar-item" onclick="switchDashTab('profile', this)">
+        <span class="sidebar-icon">👤</span> Profile
+      </a>
+      <a href="#subscription" class="sidebar-item" onclick="switchDashTab('subscription', this)">
+        <span class="sidebar-icon">⭐</span> Subscription
+      </a>
+      <div class="sidebar-section-label">Quick Links</div>
+      <a href="seller.html" class="sidebar-item">
+        <span class="sidebar-icon">🚀</span> Become a Seller
+      </a>
+      <a href="index.html#marketplace" class="sidebar-item">
+        <span class="sidebar-icon">🛒</span> Browse Marketplace
+      </a>
+    </aside>
+
+    <main class="dashboard-main" id="dashMain">
+      <!-- Dynamically rendered by dashboard.js -->
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="agents.js"></script>
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
